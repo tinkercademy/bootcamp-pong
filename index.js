@@ -15,6 +15,7 @@ app.get('/game', (req, res) => {
     res.sendFile(__dirname + '/public/game.html');
 });
 
+
 io.on('connection', (socket) => {
     console.log('A user is connected');
     socket.on('move player', (data) => {
